@@ -64,11 +64,11 @@ namespace Fraction
 
                 if (openBracket < slash && slash < closeBracket)
                 {
-                    int wholePart = int.Parse(input.Substring(0, openBracket));
+                    int whole = int.Parse(input.Substring(0, openBracket));
                     int numerator = int.Parse(input.Substring(openBracket + 1, slash - openBracket - 1));
                     int denominator = int.Parse(input.Substring(slash + 1, closeBracket - slash - 1));
 
-                    return new Fraction(numerator, denominator, wholePart);
+                    return new Fraction(numerator, denominator, whole);
                 }
             }
 
